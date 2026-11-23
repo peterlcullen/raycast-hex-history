@@ -17,12 +17,18 @@ Search and paste your Hex dictation history from Raycast.
 - **Hex CLI Path** (default `/Applications/Hex.app/Contents/MacOS/hex`)
 - **Max Entries** (default 200, clamped to 1-1000)
 
-## Development
+## Install
+
+Not in the Raycast Store. Install from source:
 
 ```
+git clone git@github.com:peterlcullen/raycast-hex-history.git ~/dev/raycast-hex-history
+cd ~/dev/raycast-hex-history
 npm install
 npm run dev
 ```
+
+Stop the dev server once the commands appear in Raycast. Don't move the folder afterwards.
 
 ## Privacy
 

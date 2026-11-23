@@ -1,0 +1,59 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "hex-history",
+  "title": "Hex History",
+  "description": "Search and paste your Hex history",
+  "icon": "icon.png",
+  "author": "peterlcullen",
+  "platforms": ["macOS"],
+  "categories": ["Productivity"],
+  "license": "MIT",
+  "preferences": [
+    {
+      "name": "hexPath",
+      "type": "textfield",
+      "required": false,
+      "title": "Hex CLI Path",
+      "description": "Path to the hex binary",
+      "default": "/Applications/Hex.app/Contents/MacOS/hex"
+    }
+  ],
+  "commands": [
+    {
+      "name": "search-history",
+      "title": "Search Hex History",
+      "description": "Browse your recent Hex history and paste an entry into the frontmost app",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "limit",
+          "type": "textfield",
+          "required": false,
+          "title": "Max Entries",
+          "description": "How many recent history entries to load",
+          "default": "200"
+        }
+      ]
+    },
+    {
+      "name": "paste-last",
+      "title": "Paste Last Dictation",
+      "description": "Paste your most recent Hex dictation into the frontmost app",
+      "mode": "no-view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.93.0",
+    "@raycast/utils": "^1.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "typescript": "^5.6.0"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "lint": "ray lint"
+  }
+}
